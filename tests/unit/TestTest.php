@@ -32,7 +32,6 @@ class TestTest extends TestCase
         $postData = isset($json['data']['posts']) ? $json['data']['posts'] : array();
         $postCount = count($postData);
         //echo "Post count: ".$postCount."\n";
-
         $this->assertEquals(4, $postCount, "Number of posts should be = 3");
     }
 
@@ -54,8 +53,7 @@ class TestTest extends TestCase
         }
         $userCount = count($users);
         //echo "Post count: ".$postCount." userCount:".$userCount."\n";        
-        $value = $userCount > 0 ? $postCount / $userCount : 0;        
-        
+        $value = $userCount > 0 ? $postCount / $userCount : 0;                
 
         $this->assertEquals(1, $value, "Number of posts should be = 1.5");
     }
